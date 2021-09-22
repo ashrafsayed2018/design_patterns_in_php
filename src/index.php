@@ -1,9 +1,18 @@
 <?php
 
-use App\OOP\PHP\Employee;
+namespace App;
 
-require_once __DIR__ . "./../vendor/autoload.php";
+use App\OOP\PHP\Bmw;
+use App\OOP\PHP\CarDashboard;
+use App\OOP\PHP\Merceedes;
+use App\OOP\PHP\Orders;
 
-$ashraf = new Employee('ashraf', 36, 2000);
+require_once __DIR__ . "/../vendor/autoload.php";
 
-var_dump($ashraf->getName());
+$bmw = new Bmw(120, '4', 'FRONT', 'BLACK');
+
+$order1 = new Orders('cairo', 'alex', 120);
+$order2 = new Orders('sohage', 'aswan', 300);
+$carDashboard = new CarDashboard();
+$bmw->installDashboard($carDashboard);
+print($bmw->carInfo());

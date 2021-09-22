@@ -1,0 +1,16 @@
+{
+    "name": "ashra/php_design_pattern_arabic_yahia",
+    "description": "design pattern course",
+    "authors": [
+        {
+            "name": "ashraf",
+            "email": "ashraf@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+   "autoload" : {
+       "psr-4" : {
+           "App\\" : "src/"
+       }
+   } 
+}

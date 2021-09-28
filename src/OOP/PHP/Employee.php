@@ -6,11 +6,11 @@ class Employee
 {
     private string $name;
     private int $age;
-    private int $salary;
+    private Salary $salary;
 
 
 
-    public function __construct(string $name, int $age, int $salary)
+    public function __construct(string $name, int $age, Salary $salary)
     {
         $this->name = $name;
         $this->age = $age;
@@ -34,9 +34,9 @@ class Employee
     }
 
     /**
-     * Get the value of salary
+     * Get the value of Salary
      */
-    public function getSalary()
+    public function getSalary(): Salary
     {
         return $this->salary;
     }

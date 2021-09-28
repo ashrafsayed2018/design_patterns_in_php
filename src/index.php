@@ -3,16 +3,15 @@
 namespace App;
 
 use App\OOP\PHP\Bmw;
-use App\OOP\PHP\CarDashboard;
-use App\OOP\PHP\Merceedes;
 use App\OOP\PHP\Orders;
+use App\OOP\PHP\OrganizationSalary;
+use App\OOP\PHP\Employee;
+use App\OOP\PHP\Merceedes;
+use App\OOP\PHP\TCPClient;
+use App\OOP\PHP\CarDashboard;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-$bmw = new Bmw(120, '4', 'FRONT', 'BLACK');
+$ashraf = new Employee('ashraf sayed', 36, new OrganizationSalary(4500, .2, 2, 30, .75, 20, .1));
 
-$order1 = new Orders('cairo', 'alex', 120);
-$order2 = new Orders('sohage', 'aswan', 300);
-$carDashboard = new CarDashboard();
-$bmw->installDashboard($carDashboard);
-print($bmw->carInfo());
+var_dump($ashraf->getSalary()->calculateSalary());

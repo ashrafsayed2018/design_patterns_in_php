@@ -2,16 +2,16 @@
 
 namespace App;
 
-use App\OOP\PHP\Bmw;
-use App\OOP\PHP\Orders;
-use App\OOP\PHP\OrganizationSalary;
-use App\OOP\PHP\Employee;
-use App\OOP\PHP\Merceedes;
-use App\OOP\PHP\TCPClient;
-use App\OOP\PHP\CarDashboard;
+use App\OOP\PHP\Relationship\MathTeacher;
+use App\OOP\PHP\Relationship\Printer\PlaintTextPrinter;
+use App\OOP\PHP\Relationship\ScienceTeacher;
+use App\OOP\PHP\Relationship\Student;
+use App\OOP\PHP\Relationship\Teacher;
 
 require_once __DIR__ . "/../vendor/autoload.php";
+$science = new ScienceTeacher('mohammed ali');
+$math = new MathTeacher('ibrahim mansoure');
+$ahmed = new Student('ahmed ali');
+$ahmed->assingTempTeacher($math);
 
-$ashraf = new Employee('ashraf sayed', 36, new OrganizationSalary(4500, .2, 2, 30, .75, 20, .1));
-
-var_dump($ashraf->getSalary()->calculateSalary());
+var_dump($math->evaluteHomework($ahmed));
